@@ -27,7 +27,10 @@ function App() {
               <Formik
                 initialValues={INITIAL_FORM_STATE}
                 validationSchema={FORM_VALIDATION}
-                onSubmit={(values) => console.log(values)}>
+                onSubmit={(values, { resetForm }) => {
+                  console.log(values);
+                  resetForm();
+                }}>
                 <Form>
                   <Grid container spacing={2}>
                     <Grid item xs={12}>
