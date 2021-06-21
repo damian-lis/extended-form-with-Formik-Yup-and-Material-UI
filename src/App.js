@@ -4,7 +4,7 @@ import { Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import { makeStyles } from '@material-ui/core/styles';
 import { Container, Grid, Typography } from '@material-ui/core';
-import { TextFieldWrapper, Select, DateTimePicker, Checkbox, Button } from 'components/FormsUI';
+import { TextField, Select, DateTimePicker, Checkbox, Button } from 'components/FormsUI';
 import countries from 'data/countries.json';
 
 const useStyles = makeStyles((theme) => ({
@@ -68,19 +68,19 @@ function App() {
                       <Typography>Your details</Typography>
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                      <TextFieldWrapper name="firstName" label="First Name" />
+                      <TextField name="firstName" label="First Name" />
                     </Grid>
 
                     <Grid item xs={12} sm={6}>
-                      <TextFieldWrapper name="lastName" label="Last Name" />
+                      <TextField name="lastName" label="Last Name" />
                     </Grid>
 
                     <Grid item xs={12} sm={6}>
-                      <TextFieldWrapper name="email" label="Email" />
+                      <TextField name="email" label="Email" />
                     </Grid>
 
                     <Grid item xs={12} sm={6}>
-                      <TextFieldWrapper name="phone" label="Phone" />
+                      <TextField name="phone" label="Phone" />
                     </Grid>
 
                     <Grid item xs={12}>
@@ -88,19 +88,19 @@ function App() {
                     </Grid>
 
                     <Grid item xs={12} sm={6}>
-                      <TextFieldWrapper name="addressLine1" label="Address Line 1" />
+                      <TextField name="addressLine1" label="Address Line 1" />
                     </Grid>
 
                     <Grid item xs={12} sm={6}>
-                      <TextFieldWrapper name="addressLine2" label="Address Line 2" />
+                      <TextField name="addressLine2" label="Address Line 2" />
                     </Grid>
 
                     <Grid item xs={12} sm={6}>
-                      <TextFieldWrapper name="city" label="City" />
+                      <TextField name="city" label="City" />
                     </Grid>
 
                     <Grid item xs={12} sm={6}>
-                      <TextFieldWrapper name="state" label="State" />
+                      <TextField name="state" label="State" />
                     </Grid>
 
                     <Grid item xs={12}>
@@ -120,7 +120,7 @@ function App() {
                     </Grid>
 
                     <Grid item xs={12}>
-                      <TextFieldWrapper name="message" label="Message" multiline={true} rows={4} />
+                      <TextField name="message" label="Message" multiline={true} rows={4} />
                     </Grid>
 
                     <Grid item xs={12}>

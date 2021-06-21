@@ -2,6 +2,6 @@ import Button from './Button';
 import Checkbox from './Checkbox';
 import DateTimePicker from './DateTimePicker';
 import Select from './Select';
-import TextFieldWrapper from './TextField';
+import TextField from './TextField';
 
-export { Button, Checkbox, DateTimePicker, Select, TextFieldWrapper };
+export { Button, Checkbox, DateTimePicker, Select, TextField };
