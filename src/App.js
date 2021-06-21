@@ -4,11 +4,7 @@ import { Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import { makeStyles } from '@material-ui/core/styles';
 import { Container, Grid, Typography } from '@material-ui/core';
-import TextFieldWrapper from 'components/FormsUI/TextField';
-import Select from 'components/FormsUI/Select';
-import DateTimePicker from 'components/FormsUI/DateTimePicker';
-import Checkbox from 'components/FormsUI/Checkbox';
-import Button from 'components/FormsUI/Button';
+import { TextFieldWrapper, Select, DateTimePicker, Checkbox, Button } from 'components/FormsUI';
 import countries from 'data/countries.json';
 
 const useStyles = makeStyles((theme) => ({
