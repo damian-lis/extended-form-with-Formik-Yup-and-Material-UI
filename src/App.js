@@ -8,6 +8,7 @@ import TextFieldWrapper from 'components/FormsUI/TextField';
 import Select from 'components/FormsUI/Select';
 import DateTimePicker from 'components/FormsUI/DateTimePicker';
 import Checkbox from 'components/FormsUI/Checkbox';
+import Button from 'components/FormsUI/Button';
 import countries from 'data/countries.json';
 
 const useStyles = makeStyles((theme) => ({
@@ -129,6 +130,10 @@ function App() {
 
                   <Grid item xs={12}>
                     <Checkbox name="termsOfService" legend="Terms Of Service" label="I agree" />
+                  </Grid>
+
+                  <Grid item xs={12}>
+                    <Button>Submit Form</Button>
                   </Grid>
                 </Grid>
               </Form>
