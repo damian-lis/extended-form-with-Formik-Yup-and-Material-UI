@@ -2,7 +2,7 @@ import React from 'react';
 import { TextField, MenuItem } from '@material-ui/core';
 import { useField, useFormikContext } from 'formik';
 
-const SelectWrapper = ({ name, options, ...otherProps }) => {
+const SelectWrapper = ({ name, options, ...restProps }) => {
   const { setFieldValue } = useFormikContext();
   const [field, meta] = useField(name);
 
@@ -13,7 +13,7 @@ const SelectWrapper = ({ name, options, ...otherProps }) => {
 
   const configSelect = {
     ...field,
-    ...otherProps,
+    ...restProps,
     select: true,
     variant: 'outlined',
     fullWidth: true,
