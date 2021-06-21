@@ -1,10 +1,10 @@
 import React from 'react';
 import Header from 'components/Header';
 import { Form, Formik } from 'formik';
-import * as Yup from 'yup';
 import { makeStyles } from '@material-ui/core/styles';
 import { Container, Grid, Typography } from '@material-ui/core';
 import { TextField, Select, DateTimePicker, Checkbox, Button } from 'components/FormsUI';
+import { INITIAL_FORM_STATE, FORM_VALIDATION } from 'config/form';
 import countries from 'data/countries.json';
 
 const useStyles = makeStyles((theme) => ({
@@ -13,40 +13,6 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(8)
   }
 }));
-
-const INITIAL_FORM_STATE = {
-  firstName: '',
-  lastName: '',
-  email: '',
-  phone: '',
-  addressLine1: '',
-  addressLine2: '',
-  city: '',
-  state: '',
-  country: '',
-  arrivealDate: '',
-  departureDate: '',
-  message: '',
-  termsOfService: false
-};
-
-const FORM_VALIDATION = Yup.object().shape({
-  firstName: Yup.string().required('Required'),
-  lastName: Yup.string().required('Required'),
-  email: Yup.string().email('Invalid email.').required('Required'),
-  phone: Yup.number().integer().typeError('Please enter a valid phone number').required('Required'),
-  addressLine1: Yup.string().required('Required'),
-  addressLine2: Yup.string(),
-  city: Yup.string().required('Required'),
-  state: Yup.string().required('Required'),
-  country: Yup.string().required('Required'),
-  arrivealDate: Yup.date().required('Required'),
-  departureDate: Yup.date().required('Required'),
-  message: Yup.string(),
-  termsOfService: Yup.boolean()
-    .oneOf([true], 'The terms and conditions must be accepted.')
-    .required('The terms and conditions must be accepted.')
-});
 
 function App() {
   const classes = useStyles();
