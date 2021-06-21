@@ -25,7 +25,7 @@ function App() {
           <Container maxWidth="md">
             <div className={classes.formWrapper}>
               <Formik
-                initialValues={{ ...INITIAL_FORM_STATE }}
+                initialValues={INITIAL_FORM_STATE}
                 validationSchema={FORM_VALIDATION}
                 onSubmit={(values) => console.log(values)}>
                 <Form>
