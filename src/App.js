@@ -56,92 +56,92 @@ function App() {
   const classes = useStyles();
 
   return (
-    <Grid container>
-      <Grid item xs={12}>
-        <Header />
+    <>
+      <Header />
+      <Grid container>
+        <Grid item xs={12}>
+          <Container maxWidth="md">
+            <div className={classes.formWrapper}>
+              <Formik
+                initialValues={{ ...INITIAL_FORM_STATE }}
+                validationSchema={FORM_VALIDATION}
+                onSubmit={(values) => console.log(values)}>
+                <Form>
+                  <Grid container spacing={2}>
+                    <Grid item xs={12}>
+                      <Typography>Your details</Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                      <TextFieldWrapper name="firstName" label="First Name" />
+                    </Grid>
+
+                    <Grid item xs={12} sm={6}>
+                      <TextFieldWrapper name="lastName" label="Last Name" />
+                    </Grid>
+
+                    <Grid item xs={12} sm={6}>
+                      <TextFieldWrapper name="email" label="Email" />
+                    </Grid>
+
+                    <Grid item xs={12} sm={6}>
+                      <TextFieldWrapper name="phone" label="Phone" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                      <Typography>Address</Typography>
+                    </Grid>
+
+                    <Grid item xs={12} sm={6}>
+                      <TextFieldWrapper name="addressLine1" label="Address Line 1" />
+                    </Grid>
+
+                    <Grid item xs={12} sm={6}>
+                      <TextFieldWrapper name="addressLine2" label="Address Line 2" />
+                    </Grid>
+
+                    <Grid item xs={12} sm={6}>
+                      <TextFieldWrapper name="city" label="City" />
+                    </Grid>
+
+                    <Grid item xs={12} sm={6}>
+                      <TextFieldWrapper name="state" label="State" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                      <Select name="country" label="Country" options={countries} />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                      <Typography>Booking information</Typography>
+                    </Grid>
+
+                    <Grid item xs={12} sm={6}>
+                      <DateTimePicker name="arrivealDate" label="Arrival Date" />
+                    </Grid>
+
+                    <Grid item xs={12} sm={6}>
+                      <DateTimePicker name="departureDate" label="Departure Date" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                      <TextFieldWrapper name="message" label="Message" multiline={true} rows={4} />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                      <Checkbox name="termsOfService" legend="Terms Of Service" label="I agree" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                      <Button>Submit Form</Button>
+                    </Grid>
+                  </Grid>
+                </Form>
+              </Formik>
+            </div>
+          </Container>
+        </Grid>
       </Grid>
-      <Grid item xs={12}>
-        <Container maxWidth="md">
-          <div className={classes.formWrapper}>
-            <Formik
-              initialValues={{ ...INITIAL_FORM_STATE }}
-              validationSchema={FORM_VALIDATION}
-              onSubmit={(values) => console.log(values)}>
-              <Form>
-                <Grid container spacing={2}>
-                  <Grid item xs={12}>
-                    <Typography>Your details</Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <TextFieldWrapper name="firstName" label="First Name" />
-                  </Grid>
-
-                  <Grid item xs={6}>
-                    <TextFieldWrapper name="lastName" label="Last Name" />
-                  </Grid>
-
-                  <Grid item xs={12}>
-                    <TextFieldWrapper name="email" label="Email" />
-                  </Grid>
-
-                  <Grid item xs={12}>
-                    <TextFieldWrapper name="phone" label="Phone" />
-                  </Grid>
-
-                  <Grid item xs={12}>
-                    <Typography>Address</Typography>
-                  </Grid>
-
-                  <Grid item xs={12}>
-                    <TextFieldWrapper name="addressLine1" label="Address Line 1" />
-                  </Grid>
-
-                  <Grid item xs={12}>
-                    <TextFieldWrapper name="addressLine2" label="Address Line 2" />
-                  </Grid>
-
-                  <Grid item xs={6}>
-                    <TextFieldWrapper name="city" label="City" />
-                  </Grid>
-
-                  <Grid item xs={6}>
-                    <TextFieldWrapper name="state" label="State" />
-                  </Grid>
-
-                  <Grid item xs={12}>
-                    <Select name="country" label="Country" options={countries} />
-                  </Grid>
-
-                  <Grid item xs={12}>
-                    <Typography>Booking information</Typography>
-                  </Grid>
-
-                  <Grid item xs={6}>
-                    <DateTimePicker name="arrivealDate" label="Arrival Date" />
-                  </Grid>
-
-                  <Grid item xs={6}>
-                    <DateTimePicker name="departureDate" label="Departure Date" />
-                  </Grid>
-
-                  <Grid item xs={12}>
-                    <TextFieldWrapper name="message" label="Message" multiline={true} rows={4} />
-                  </Grid>
-
-                  <Grid item xs={12}>
-                    <Checkbox name="termsOfService" legend="Terms Of Service" label="I agree" />
-                  </Grid>
-
-                  <Grid item xs={12}>
-                    <Button>Submit Form</Button>
-                  </Grid>
-                </Grid>
-              </Form>
-            </Formik>
-          </div>
-        </Container>
-      </Grid>
-    </Grid>
+    </>
   );
 }
 
