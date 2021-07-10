@@ -1,4 +1,4 @@
-# Formik app
+# My Formik App
 
 An extensive form with various fields to fill in supported by Formik.
 
@@ -8,7 +8,7 @@ An extensive form with various fields to fill in supported by Formik.
 
 <br/>
 
-### Live version is available [here](https://extended-form-with-formik-yup-and-material-ui.vercel.app/).
+### Live version is available [here](https://my-formik-app.vercel.app/).
 
 <br/>
 
